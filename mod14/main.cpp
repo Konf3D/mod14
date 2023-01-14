@@ -8,8 +8,4 @@ int main()
 {
 	std::string data;
 
-	do
-	{
-
-	} while (data!="exit");
 }

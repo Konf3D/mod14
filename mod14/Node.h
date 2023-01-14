@@ -8,10 +8,13 @@ public:
 	Node(const char c);
 	~Node() = default;
 public:
-	bool addWord(std::string& word);
-
+	bool addWord(const std::string& word);
+	std::string searchWord(const std::string& word);
 private:
-	char addWord(std::string& word, int i);
+	bool addWord(const std::string& word, int i);
+	std::string searchWord(const std::string& word, int i);
+	std::string searchWord() const;
 	char c;
 	std::map<char, Node> m_next;
 };
+
