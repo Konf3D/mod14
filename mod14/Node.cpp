@@ -57,7 +57,7 @@ bool Node::addWord(const std::string& word, int i)
 		m_next.emplace(word[i], Node(word[i]));
 	}
 
-	return m_next.at(word[0]).addWord(word, ++i);
+	return m_next.at(word[i]).addWord(word, ++i);
 }
 
 std::string Node::searchWord(const std::string& word, int i)
