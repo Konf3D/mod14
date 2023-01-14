@@ -7,7 +7,7 @@ public:
 	Trie(std::fstream& file);
 	~Trie() = default;
 public:
-	std::string findWord(const std::string& word);
+	std::string findWord(const std::string& word) const;
 private:
 	std::map<char, Node> m_next;
 };

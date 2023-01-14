@@ -11,11 +11,12 @@ int main()
 		return -1;
 
 	Trie root(file);
+
 	return 1;
 	
 }
 
-void gui(Trie root)
+void gui(const Trie& root)
 {
 
 }

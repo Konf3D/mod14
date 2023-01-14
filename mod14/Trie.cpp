@@ -19,7 +19,7 @@ Trie::Trie(std::fstream& data)
 
 }
 
-std::string Trie::findWord(const std::string& word)
+std::string Trie::findWord(const std::string& word) const
 {
 	if (m_next.find(word[0]) == m_next.end())
 		return std::string();

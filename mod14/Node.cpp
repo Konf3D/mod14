@@ -23,7 +23,7 @@ bool Node::addWord(const std::string& word)
 	return m_next.at(word[0]).addWord(word, 1);
 }
 
-std::string Node::searchWord(const std::string& word)
+std::string Node::searchWord(const std::string& word) const
 {
 	if (word.empty())
 		throw std::exception("Empty word was parsed!");
@@ -60,7 +60,7 @@ bool Node::addWord(const std::string& word, int i)
 	return m_next.at(word[i]).addWord(word, ++i);
 }
 
-std::string Node::searchWord(const std::string& word, int i)
+std::string Node::searchWord(const std::string& word, int i) const
 {
 	if (i < 1)
 	{
