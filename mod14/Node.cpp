@@ -71,11 +71,8 @@ std::string Node::searchWord(const std::string& word, int i) const
 		if (m_next.empty())
 			return std::string(1, c);
 
-		++i;
 
-		auto kek = std::string(searchWord());
-		//return std::string(c + searchWord());
-		return kek;
+		return std::string(c + searchWord());
 	}
 	else
 	{
@@ -86,9 +83,7 @@ std::string Node::searchWord(const std::string& word, int i) const
 		}
 		else
 		{
-			auto kek = std::string(c + m_next.at(word[i]).searchWord(word, i));
-			//return std::string(c + m_next.at(word[i]).searchWord(word, i));
-			return kek;
+			return std::string(c + m_next.at(word[i]).searchWord(word, i));
 		}
 	}
 	throw std::exception("Search failed!");
