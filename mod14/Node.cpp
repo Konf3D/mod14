@@ -101,6 +101,13 @@ std::string Node::searchWord() const
 	++counter;
 	if (counter == 'z')
 		counter = 'a';
+	// idea for consecutive iteration -> not working
+	/*
+	static auto ptrCounter = m_next.begin();
+	++ptrCounter;
+	auto charCounter = ptrCounter->first;
+	if (ptrCounter == m_next.end())
+		ptrCounter = m_next.begin();*/
 
 	//if this is the end of the word
 	if (m_next.empty())
