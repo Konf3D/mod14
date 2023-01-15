@@ -14,7 +14,8 @@ Trie::Trie(std::fstream& data)
 	while (std::getline(data,tmp))
 	{
 		if (m_next.find(tmp[0]) != m_next.end())
-			m_next.at(tmp[0]).addWord(tmp);
+			if (!m_next.at(tmp[0]).addWord(tmp))
+				throw 1;
 	}
 
 }
