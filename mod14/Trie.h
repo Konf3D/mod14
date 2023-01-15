@@ -4,7 +4,7 @@ class Trie
 {
 public:
 	Trie() = delete;
-	Trie(std::fstream& file);
+	explicit Trie(std::fstream& file);
 	~Trie() = default;
 public:
 	std::string findWord(const std::string& word) const;

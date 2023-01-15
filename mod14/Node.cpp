@@ -15,10 +15,8 @@ bool Node::addWord(const std::string& word)
 	if (word[i] != this->c)
 		throw std::exception("Wrong symbol was parsed!");
 	++i;
-	if (m_next.find(word[i]) == m_next.end())
-	{
-		m_next.emplace(word[i],Node(word[i]));
-	}
+
+	m_next.emplace(word[i],Node(word[i]));
 
 	return m_next.at(word[i]).addWord(word, i);
 }
@@ -51,10 +49,8 @@ bool Node::addWord(const std::string& word, int i)
 		return true;
 	}
 	++i;
-	if (m_next.find(word[i]) == m_next.end())
-	{
-		m_next.emplace(word[i], Node(word[i]));
-	}
+	
+	m_next.emplace(word[i], Node(word[i]));
 
 	return m_next.at(word[i]).addWord(word, i);
 }

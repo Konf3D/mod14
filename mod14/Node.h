@@ -5,7 +5,7 @@ class Node
 {
 public:
 	Node() = delete;
-	Node(const char c);
+	explicit Node(const char c);
 	~Node() = default;
 public:
 	bool addWord(const std::string& word);
